@@ -1,0 +1,40 @@
+body {
+	overflow: hidden;
+}
+.widget_search button {
+	padding-top: 6px;
+}
+.widget_search button span {
+	background-position: -192px -52px;
+}
+form .formSubmit button#submit {
+	line-height: 30px;
+	padding-top: 7px;
+	padding-bottom: 0;
+	height: 45px;
+}
+form .formSubmit button#submit em {
+	top: 0;
+	bottom: -1px;
+}
+#sendCopy {
+	background: none;
+	padding: 0;
+	margin: -1px 0 0 0;
+}
+.socialLinks li {
+	display: inline;
+}
+button {
+	overflow: visible;
+}
+.commentLink {
+	line-height: 18px;
+}
+#main,
+.widgetArea ul li.widget-container ul li { {
+	zoom: 1;
+}
+ul#navigation li.current_page_item a {
+	border: none;
+}

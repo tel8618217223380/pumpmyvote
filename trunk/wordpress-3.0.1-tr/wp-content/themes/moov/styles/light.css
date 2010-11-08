@@ -1,0 +1,191 @@
+/* BODY ---------------------------------------------------------*/
+	
+	body {
+		color: #767571;
+		background: #C5BFAF;
+	}
+	
+/* LINKS ---------------------------------------------------------*/
+
+	a:link,
+	a:visited,
+	a:hover,
+	a:focus,
+	a:active {
+		color: #4F5052;
+	}
+	
+	a:hover,
+	a:focus {
+		color: #000;
+	}
+	
+	#container a:link,
+	#container a:visited,
+	#container a:hover,
+	#container a:focus,
+	#container a:active {
+		color: #4F5052;
+	}
+
+/* HEADINGS ---------------------------------------------------------*/
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: #4F5052;
+	}
+	
+/* HEADER ---------------------------------------------------------*/
+
+	#header #branding #blogTitle a {
+		color: #948f83;
+	}
+	
+/* MAIN ---------------------------------------------------------*/
+	
+	#sidebar h3 {
+		color: #4f5052;
+	}
+
+	#container {
+		color: #838585;
+	}
+
+/* LIST OF POSTS ---------------------------------------------------------*/
+
+	.otherStory .postDate {
+		background: #4f5052;
+		color: #FFF;
+	}
+
+	.otherStory .postDate span {
+		color: #FFF;
+	}
+	
+/* POST ---------------------------------------------------------*/
+
+	.entryContent p:first-child {
+		color: #4f5052;
+	}
+
+	.entryMeta {
+		color: #CCC;
+	}
+
+	.entryMeta a {
+		color: #999;
+	}
+	
+	.authorBlock p {
+		color: #4f5052;	
+	}
+	
+/* COMMENTS ---------------------------------------------------------*/
+
+	#comments ol li .commentAuthor {
+		color: #4f5052;
+	}
+
+	#comments ol li .commentMeta .commentOptions a:hover,
+	#comments ol li .commentMeta .commentOptions a:focus {
+		color: #a1a3a2;
+	}
+
+/* FORMS ---------------------------------------------------------*/
+
+	form .formSubmit button#submit {
+		background: #4f5052 url("../images/button_bg_lighter.png") 0 50% repeat-x;
+		color: #FFF;
+	}
+	
+	form .formSubmit button#submit em {
+		border-right: 1px solid #B1AB9A;
+	}
+
+/* NAVIGATION ---------------------------------------------------------*/
+
+	ul#navigation li a {
+		background: #4f5052 url("../images/button_bg_lighter.png") 0 50% repeat-x;
+		color: #FFF;
+	}
+	
+	ul#navigation li.current_page_item a {
+		color: #4f5052;
+	}
+
+/* WIDGETS ---------------------------------------------------------*/
+
+	.widgetArea ul li.widget-container ul li {
+		background-position: 0 -260px;
+	}
+
+	/* SEARCH ---------------------------------------------------------*/
+
+		.widget_search input {
+			background: #a7a398;
+			color: #4f5052;
+		}
+		
+		.widget_search button {
+			background: #4f5052 url("../images/button_bg_lighter.png") 0 50% repeat-x;
+		}
+	
+	/* CALENDAR ---------------------------------------------------------*/
+
+		.widget_calendar caption {
+			color: #4f5052;
+		}
+	
+		.widget_calendar th {
+			color: #4f5052;
+		}
+	
+		.widget_calendar tbody td {
+			color: #767571;
+		}
+		
+		.widget_calendar tbody td a {
+			background: #c5bfaf;
+			color: #4f5052;
+		}
+
+/* TWITTER ---------------------------------------------------------*/
+
+	#latestTweet ul li p:first-child a {
+		color: #767571;
+	}
+	
+	#latestTweet ul li p {
+		color: #767571;
+	}
+
+
+/* FOOTER ---------------------------------------------------------*/
+	
+	#footer .copyright {
+		color: #4F5052;
+	}
+	
+	#footer .badge,
+	#footer .badge a {
+		color: #767571;
+	}
+
+/* NEW HOVER EFFECTS ---------------------------------------------------------*/
+	
+	ul#navigation li a:hover,
+	ul#navigation li a:focus,
+	.widget_search button:hover,
+	.widget_search button:focus,
+	form .formSubmit button#submit:hover,
+	form .formSubmit button#submit:focus {
+		background: #625F57 url("../images/button_bg_lighter.png") 0 50% repeat-x;
+	}
+	
+	ul#navigation li.current_page_item a,
+	ul#navigation li.current_page_item a:hover,
+	ul#navigation li.current_page_item a:focus {
+		background: #FFF;
+	}
