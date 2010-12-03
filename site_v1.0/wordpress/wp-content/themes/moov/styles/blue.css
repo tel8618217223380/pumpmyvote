@@ -1,0 +1,186 @@
+/* BODY ---------------------------------------------------------*/
+	
+	body {
+		color: #5b99ba;
+		background: #20567f;
+	}
+	
+/* LINKS ---------------------------------------------------------*/
+
+	a:link,
+	a:visited,
+	a:hover,
+	a:focus,
+	a:active {
+		color: #5b99ba;
+	}
+	
+	a:hover,
+	a:focus {
+		color: #FFF;
+	}
+	
+	#container a:link,
+	#container a:visited,
+	#container a:hover,
+	#container a:focus,
+	#container a:active {
+		color: #092B45;
+	}
+
+/* HEADINGS ---------------------------------------------------------*/
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: #092b45;
+	}
+	
+/* HEADER ---------------------------------------------------------*/
+
+	#header #branding #blogTitle a {
+		color: #194565;
+	}
+	
+/* MAIN ---------------------------------------------------------*/
+	
+	#sidebar h3 {
+		color: #FFF;
+	}
+
+	#container {
+		color: #838585;
+	}
+
+/* LIST OF POSTS ---------------------------------------------------------*/
+
+	.otherStory .postDate {
+		background: #092b45;
+		color: #FFF;
+	}
+
+	.otherStory .postDate span {
+		color: #FFF;
+	}
+
+/* POST ---------------------------------------------------------*/
+
+	.entryContent p:first-child {
+		color: #092b45;
+	}
+
+	.entryMeta {
+		color: #CCC;
+	}
+
+	.entryMeta a {
+		color: #999;
+	}
+	
+	.authorBlock p {
+		color: #092b45;	
+	}
+	
+/* COMMENTS ---------------------------------------------------------*/
+
+	#comments ol li .commentAuthor {
+		color: #092B45;
+	}
+
+	#comments ol li .commentMeta .commentOptions a:hover,
+	#comments ol li .commentMeta .commentOptions a:focus {
+		color: #a1a3a2;
+	}
+
+/* FORMS ---------------------------------------------------------*/
+
+	form .formSubmit button#submit {
+		background: #072034 url("../images/button_bg_lighter.png") 0 50% repeat-x;
+		color: #FFF;
+	}
+	
+	form .formSubmit button#submit em {
+		border-right: 1px solid #999;
+	}
+
+/* NAVIGATION ---------------------------------------------------------*/
+
+	ul#navigation li a {
+		background: #072034 url("../images/button_bg_lighter.png") 0 50% repeat-x;
+		color: #FFF;
+	}
+	
+	ul#navigation li.current_page_item a {
+		color: #092b45;
+	}
+
+/* WIDGETS ---------------------------------------------------------*/
+
+	.widgetArea ul li.widget-container ul li {
+		background-position: 0 -260px;
+	}
+
+	/* SEARCH ---------------------------------------------------------*/
+
+		.widget_search input {
+			background: #416f92;
+			color: #FFF;
+		}
+		
+		.widget_search button {
+			background: #072034 url("../images/button_bg_lighter.png") 0 50% repeat-x;
+		}
+	
+	/* CALENDAR ---------------------------------------------------------*/
+
+		.widget_calendar caption {
+			color: #FFF;
+		}
+	
+		.widget_calendar th {
+			color: #FFF;
+		}
+	
+		.widget_calendar tbody td {
+			color: #5b99ba;
+		}
+		
+		.widget_calendar tbody td a {
+			background: #18405f;
+			color: #FFF;
+		}
+
+/* TWITTER ---------------------------------------------------------*/
+
+	#latestTweet ul li p:first-child a {
+		color: #FFF;
+	}
+	
+	#latestTweet ul li p {
+		color: #FFF;
+	}
+
+
+/* FOOTER ---------------------------------------------------------*/
+	
+	#footer .copyright {
+		color: #FFF;
+	}
+
+/* NEW HOVER EFFECTS ---------------------------------------------------------*/
+	
+	ul#navigation li a:hover,
+	ul#navigation li a:focus,
+	.widget_search button:hover,
+	.widget_search button:focus,
+	form .formSubmit button#submit:hover,
+	form .formSubmit button#submit:focus {
+		background: #5B99BA url("../images/button_bg_lighter.png") 0 50% repeat-x;
+	}
+	
+	ul#navigation li.current_page_item a,
+	ul#navigation li.current_page_item a:hover,
+	ul#navigation li.current_page_item a:focus {
+		background: #FFF;
+	}

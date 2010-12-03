@@ -1,0 +1,21 @@
+form .formSubmit button#submit {
+	padding-bottom: 5px;
+	line-height: 35px;
+}
+form .formSubmit button#submit em {
+	top: 0;
+	bottom: 0;
+}
+.widget_search button span {
+	background-position: -192px -52px;
+}
+#sendCopy {
+	background: none;
+	padding: 0;
+	margin: 2px 0 0 0;
+}
+#sidebar,
+#sidebar h3,
+#respond h2 {
+	overflow: hidden;
+}

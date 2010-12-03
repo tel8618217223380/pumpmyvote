@@ -1,0 +1,67 @@
+.rm_opts {
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+
+.rm_opts .rm_section {
+	overflow: hidden;
+}
+
+.rm_opts label {
+	float: left;
+	width: 200px;
+}
+
+.rm_opts .rm_option_block {
+	margin-left: 230px;
+}
+
+.rm_opts .rm_option_block .colour_block {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+.rm_opts .rm_input {
+	overflow: hidden;
+	display: block;
+	padding: 0 0 15px 0;
+}
+
+.rm_opts .rm_input input {
+	width: 50%;
+}
+
+.rm_opts .rm_checkbox input {
+	width: auto;
+}
+
+.rm_opts textarea {
+	height: 200px;
+	width: 75%;
+}
+
+.rm_opts span.submit {
+	display: block;
+	clear: both;
+	padding: 20px 0 0 0;
+}
+
+.rm_opts form.reset span.submit {
+	display: inline;
+}
+
+.rm_opts span.submit span {
+	padding: 0 10px;
+}
+
+.rm_opts .rm_textarea label,
+.rm_opts .rm_textarea .description {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.rm_opts .rm_textarea .description {
+	margin: 10px 0 0 0;
+}

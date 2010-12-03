@@ -556,15 +556,30 @@ function custom_comments($comment=false, $args=false, $depth=false, $post=false)
 		
 		<div class="commentHolder">
 
-			<div class="commentAuthor vcard"><?php commenter_link() ?></div>
+			<div class="commentAuthor vcard">
+				<div align="left">
+					<?php
+					/*
+						$query = "SELECT comment_arti_eksi FROM  $wpdb->comment_arti_eksi WHERE comment_ID=" . get_comment_ID() . ";";
+						$user_count = $wpdb->get_var($wpdb->prepare($query));
+						echo '<p>User count is ' . $user_count . '</p>';
+					*/	
+						$query = "SELECT comment_arti_eksi FROM wp_comment_arti_eksi WHERE comment_ID = " . get_comment_ID() . ";";
+						$result = mysql_query($query);
+						$row = mysql_fetch_assoc($result);
+						print "<font style=\"font-size:20px\">$row[comment_arti_eksi]</font>";
+						//$allmiles=$wpdb->get
+						//echo '<p>Total miles is '.$allmiles . '</p>';
+
+
+					?>
+				</div>
+				<div align="right">
+					<?php commenter_link() ?>
+				</div>
+			</div>
 							
 				<div class="commentContent">
-					<?php
-						$query = "SELECT comment_arti_eksi FROM comment_arti_eksi WHERE comment_ID=" . get_comment_ID();
-						print $wpdb->get_var($query, 0, 0);
-						//$yorum_tip = $wpdb->get_results( "SELECT comment_arti_eksi FROM wp_comment_arti_eksi WHERE comment_ID=" . get_comment_ID());
-						//print ($yorum_tip);
-					?>
 					<?php comment_text() ?>
 				<?php if ($comment->comment_approved == '0') _e("<p class='unapproved'>Your comment is awaiting moderation.</p>\n", 'moov') ?>
 				</div>
@@ -623,6 +638,13 @@ function custom_pings($comment, $args, $depth) {
 	<?php if ($comment->comment_approved == '0') _e('\t\t\t\t\t<span class="unapproved">Your trackback is awaiting moderation.</span>\n', 'moov') ?>
 	
 		<div class="commentContent">
+			
+			<?php
+			/*
+			 *Wrote for pumpmyvote. 
+			 * */
+			
+			?>
 			<?php comment_text() ?>
 		</div>
 
