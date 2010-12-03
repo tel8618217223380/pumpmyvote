@@ -1,0 +1,1013 @@
+/*   
+Theme Name: moov
+Theme URI: http://example.com/example/
+Description: moov for gamers
+Author: Chris Mahon
+Author URI: http://chrismahon.com/
+Version: 1.1
+Your theme will be your copyrighted work
+Like WordPress, this work is released under GNU General Public License, version 2 (GPL).
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+*/
+
+/* BODY ---------------------------------------------------------*/
+	
+	body {
+		margin: 20px 0;
+		height: 100%;
+		overflow-y: scroll;
+		font-size: 14px;
+		line-height: 20px;
+		font-family: Arial;
+		font-weight: normal;
+	}
+	
+	code {
+		font-family: Arial;
+	}
+
+	.skipLink {
+		display: none;
+	}
+	
+	p.introText {
+		margin: 10px 0 20px 0;
+	}
+
+/* LINKS ---------------------------------------------------------*/
+
+	a:link,
+	a:visited,
+	a:hover,
+	a:focus,
+	a:active {
+		text-decoration: none;
+	}
+
+/* LISTS ---------------------------------------------------------*/
+
+	ol,
+	ul {
+		margin-left: 20px;
+	}
+	ol li,
+	ul li {
+		margin-left: 20px;
+		margin-bottom: 5px;
+		list-style: disc;
+	}
+	ol li {
+		list-style: upper-roman;
+	}
+
+/* STRUCTURE ---------------------------------------------------------*/
+
+	h1,
+	h2,
+	h3,
+	h4,
+	p,
+	ol,
+	ul {
+		margin-bottom: 20px;
+	}
+
+/* HEADINGS ---------------------------------------------------------*/
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: 'ArialNarrow', Arial, sans-serif;
+		text-transform: uppercase;
+		font-weight: normal;
+		letter-spacing: .5px;
+	}
+	
+	h1 {
+		margin-bottom: 0;
+	}
+	
+	h1,
+	h2 {
+		font-size: 50px;
+		line-height: 50px;
+		text-align: center;
+	}
+
+/* WRAPPER ---------------------------------------------------------*/
+	
+	#wrapper {
+	width: 910px;
+	margin: 0 auto;
+	padding-left: 50px;
+	}
+	
+/* HEADER ---------------------------------------------------------*/
+
+	#header {
+		position: relative;
+		overflow: hidden;
+	}
+	
+	#header .bubbleTop {
+		background-image: url(images/sprite.png);
+		background-repeat: repeat-x;
+		height: 10px;
+		width: 685px;
+	}
+
+	#header #branding {
+	width: 640px;
+	padding: 40px 20px 0 20px;
+	background: #ffffff;
+	text-align: center;
+	}
+	
+	#header #branding #blogTitle {
+		font-size: 100px;
+		line-height: 100px;
+		font-family: 'ArialNarrow', Arial, sans-serif;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+
+	#header #branding #blogTitle a {
+		text-decoration: none;
+	}
+
+/* SOCIAL LINKS ---------------------------------------------------------*/
+
+	.socialLinks {
+		width: 230px;
+		margin: 0;
+		position: absolute;
+		top: 10px;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+	}
+
+	.socialLinks li {
+		display: inline-block;
+		list-style: none;
+		padding: 25% 0;
+	}
+
+	.socialLinks li a {
+		display: block;
+		height: 45px;
+		margin: 0;
+		width: 45px;
+		background-image: url(images/sprite.png);
+		background-repeat: no-repeat;
+	}
+	
+	.socialLinks li a.iconFacebook {
+		background-position: 0 0;	
+	}
+
+	.socialLinks li a.iconFacebook:hover,
+	.socialLinks li a.iconFacebook:focus {
+		background-position: 0 -45px;
+	}
+
+	.socialLinks li a.iconTwitter {
+		background-position: -45px 0;	
+	}
+	
+	.socialLinks li a.iconTwitter:hover,
+	.socialLinks li a.iconTwitter:focus {
+		background-position: -45px -45px;
+	}
+	
+	.socialLinks li a.iconRss {
+		background-position: -90px 0;
+	}
+	
+	.socialLinks li a.iconRss:hover,
+	.socialLinks li a.iconRss:focus {
+		background-position: -90px -45px;
+	}
+	
+	.socialLinks li a span {
+		display: none;
+	}
+
+/* MAIN ---------------------------------------------------------*/
+
+	#main {
+		clear: both;
+	}
+	
+	#main:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+
+	#sidebar {
+		width: 230px;
+		padding-top: 20px;
+		font-size: 13px;
+	}
+	
+	#sidebar h3 {
+		font-size: 37px;
+		line-height: 37px;
+	}
+
+	#container {
+	width: 640px;
+	padding: 20px;
+	background: #ffffff;
+	}
+	
+	#content {
+	border-top: 1px dashed #ff6600;
+	padding-top: 30px;
+	}
+
+/* LIST OF POSTS ---------------------------------------------------------*/
+
+	.otherStory {
+	position: relative;
+	border-top: 1px dashed #ff6600;
+	margin: 30px 0 0;
+	padding: 30px 0 0;
+	}
+	
+	.otherStory .storyIntro {
+		position: absolute;
+		z-index: 1;
+		top: 30px;
+		left: 0;
+		background: #FFF;
+		padding: 0 15px 10px 0;
+		-moz-border-radius-bottomright: 20px;
+		-webkit-border-bottom-right-radius: 20px;
+	}
+	
+	.otherStory .storyIntro h2 {
+		font-size: 40px;
+		text-align: left;
+		line-height: 40px;
+		margin: 0;
+	}
+	
+	.otherStory .storyIntro .entryMeta {
+		margin-top: -5px;
+		font-size: 12px;
+	}
+
+	.otherStory p.storyExcerpt {
+		margin-top: 10px;
+	}
+	
+	.otherStory p.storyExcerpt span {
+		color: #CCC;
+	}
+	
+	.otherStory .commentLink {
+		position: absolute;
+		width: 27px;
+		height: 23px;
+		top: 40px;
+		right: 10px;
+		background-image: url(images/sprite.png);
+		background-repeat: no-repeat;
+		background-position: -239px -59px;
+		text-align: center;
+		font-size: 12px;
+	}
+	
+	.otherStory.hover .commentLink {
+		background-position: -285px -59px;
+		color: #FFF;
+	}
+	
+	.otherStory .postDate {
+		position: absolute;
+		padding: 10px 10px 5px 10px;
+		width: 30px;
+		top: 20px;
+		font-family: 'ArialNarrow', Arial, sans-serif;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: 40px;
+		line-height: 40px;
+		text-align: center;
+	}
+
+	.otherStory .postDate span {
+		display: block;
+		margin-top: -5px;
+		text-align: center;
+		font-size: 25px;
+		line-height: 25px;
+	}
+	
+	.otherStory:first-child {
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.otherStory:first-child .storyIntro {
+		top: 0;
+	}
+	
+	.otherStory:first-child .commentLink {
+		top: 10px;
+	}
+	
+	.otherStory:first-child .postDate {
+		top: -10px;
+	}
+
+/* POST ---------------------------------------------------------*/
+
+	.image {
+		margin-bottom: 30px;
+	}
+
+	.entryContent p:first-child {
+		font-size: 22px;
+		line-height: 25px;
+	}
+	
+	.entryContent p:first-child span.dropCap {
+		font-size: 100px;
+		line-height: 100px;
+		font-family: 'ArialNarrow', Arial, sans-serif;
+		text-transform: uppercase;
+		font-weight: normal;
+		float: left;
+		margin: 0 10px 0 0;
+	}
+
+	.entryMeta {
+		text-transform: uppercase;
+	}
+	
+	.authorBlock,
+	.entryUtility {
+		overflow: hidden;
+		border-top: 1px dashed #EAEBEC;
+		margin: 30px 0 0;
+		padding: 30px 0 0;
+	}
+	
+	.entryUtility div {
+		margin: 10px 0;
+	}
+
+	.entryUtility div:first-child {
+		margin-top: 0;
+	}
+	
+	.entryUtility .icon {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		vertical-align: middle;
+		margin-right: 10px;
+		background-image: url(images/sprite.png);
+		background-repeat: no-repeat;
+	}
+	
+	.entryUtility .iconCategory {
+		background-position: -321px -14px;
+	}
+	
+	.entryUtility .iconTag {
+		background-position: -349px -14px;
+	}
+	
+	.entryUtility .iconBookmark {
+		background-position: -377px -14px;
+	}
+
+	.authorBlock img {
+		float: left;
+		margin-right: 20px;
+	}
+	
+	.authorBlock p {
+		font-weight: bold;
+		margin: 0;
+	}
+	
+	body.single .entryMeta {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+/* OTHER POSTS ---------------------------------------------------------*/
+
+	.otherPosts {
+	border-top: 1px dashed #EAEBEC;
+	padding: 30px 0 0 0;
+	margin: 30px 0 0 0;
+	}
+
+	.otherPosts .inner {
+		position: relative;
+	}
+	
+	.otherPosts .lessPosts {
+		position: absolute;
+		bottom: 40px;
+		left: 50px;
+		height: 15px;
+		width: 40px;
+		background-image: url(images/sprite.png);
+		background-repeat: no-repeat;
+		background-position: -146px -14px;
+	}
+	
+	.otherPosts .lessPosts:hover,
+	.otherPosts .lessPosts:focus {
+		background-position: -233px -14px;	
+	}
+	
+	.otherPosts .morePosts {
+		position: absolute;
+		bottom: 40px;
+		right: 0;
+		height: 15px;
+		width: 40px;
+		background-image: url(images/sprite.png);
+		background-repeat: no-repeat;
+		background-position: -183px -14px;
+	}
+	
+	.otherPosts .morePosts:hover,
+	.otherPosts .morePosts:focus {
+		background-position: -270px -14px;	
+	}
+	
+	.otherPosts .lessPosts span,
+	.otherPosts .morePosts span {
+		display: none;
+	}
+
+	.otherPosts .inner .overflow {
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		margin: 0 50px;
+	}
+
+	.otherPosts ul {
+		margin: 0;
+		height: 88px;
+	}
+
+	.otherPosts li {
+		float: left;
+		list-style: none;
+		margin: 0 10px 0 0;
+		width: 100px;
+	}
+	
+/* COMMENTS ---------------------------------------------------------*/
+
+	#comments #commentsList,
+	#comments #respond {
+		border-top: 1px dashed #EAEBEC;
+		padding: 30px 0 0 0;
+		margin: 30px 0 0 0;
+	}
+	
+	#comments ol,
+	#comments ol li {
+		margin: 0;
+		list-style: none;
+	}
+	
+	#comments ol ul.children li {
+		list-style: none;
+	}
+	
+	#comments ol li .commentHolder {
+		margin-bottom: 20px;
+		padding: 20px 20px 15px 20px;
+		position: relative;
+	}
+
+	#comments ol li .commentAuthor {
+		font-weight: bold;
+		padding: 0 0 10px 0;
+		text-transform: uppercase;
+	}
+	
+	#comments ol li .commentAuthor img {
+		vertical-align: middle;
+		margin: -2px 10px 0 0;
+	}
+
+	#comments ol li .commentContent {
+		border-top: 1px dashed #CCC;
+		padding: 15px 0 0 0;	
+	}
+	
+	#comments ol li .commentMeta {
+		overflow: hidden;
+		border-top: 1px dashed #CCC;
+		padding: 10px 0 0 0;
+		color: #CCC;
+	}
+	
+	#comments ol li .commentMeta .commentOptions {
+		float: left;
+	}
+
+	#comments ol li .commentMeta .commentOptions a {
+		margin-right: 20px;
+		color: #CCC;
+	}
+
+	#comments ol li .commentMeta .commentOptions a span {
+		display: inline-block;
+		vertical-align: text-top;
+		margin-right: 5px;
+		height: 15px;
+		background-image: url(images/sprite.png);
+		background-repeat: no-repeat;
+	}
+
+	#comments ol li .commentMeta .commentOptions a span.iconReply {
+		width: 11px;
+		background-position: 0 -343px;
+	}
+	
+	#comments ol li .commentMeta .commentOptions a:hover span.iconReply,
+	#comments ol li .commentMeta .commentOptions a:focus span.iconReply {
+		background-position: -34px -343px;
+	}
+	
+	#comments ol li .commentMeta .commentOptions a span.iconPermalink {
+		width: 21px;
+		background-position: -12px -343px;
+	}
+	
+	#comments ol li .commentMeta .commentOptions a:hover span.iconPermalink,
+	#comments ol li .commentMeta .commentOptions a:focus span.iconPermalink {
+		background-position: -46px -343px;
+	}
+
+	#comments ol li .commentMeta .commentOptions a em {
+		font-style: normal;
+	}
+	
+	#comments ol li .commentMeta .commentTime {
+		float: right;
+		text-align: right;
+	}
+	
+	#comments .even > .commentHolder {
+		background: #eaebec;
+	}
+	
+	#comments .odd > .commentHolder {
+		background: #f5f5f5;
+	}
+	
+	#comments #commentNotes {
+		font-size: 12px;
+		margin-bottom: 30px;
+		color: #CCC;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	
+	#comments .formAlternativeOption {
+		display: none;
+	}
+	
+	#comments #respond h2 {
+		margin: 0;
+	}
+	
+	#comments #respond p#login {
+		margin-top: 20px;
+	}
+	
+	#comments ol #respond {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	
+	#comments ol .formAlternativeOption {
+		display: inline;
+		padding: 0 5px;
+	}
+	
+	#comments ol #respond h2 {
+		display: none;
+	}
+	
+	#comments ul.children #respond .formSection textarea {
+		width: 590px;
+	}
+
+/* FORMS ---------------------------------------------------------*/
+
+	form input,
+	form textarea {
+		font-size: 14px;
+		font-family: Arial;
+		background: #eaebec;
+		border: none;
+		padding: 15px;
+		width: 305px;
+	}
+	
+	form textarea {
+		width: 610px;
+		height: 200px;
+	}
+	
+	form ul {
+		margin: 0;
+	}
+	
+	form ul li {
+		margin: 0 0 20px 0;
+		list-style: none;
+	}
+	
+	form .formSection {
+		position: relative;
+	}
+	
+	form .formLabel,
+	form label {
+		display: none;
+	}
+	
+	form .formSubmit {
+		position: relative;
+	}
+	
+	form .formSubmit button,
+	form .formSubmit input {
+		vertical-align: middle;
+	}
+	
+	form .formSubmit button#submit {
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border: none;
+		cursor: pointer;
+		font-family: 'ArialNarrow', Arial, sans-serif;
+		font-size: 30px;
+		text-transform: uppercase;
+		padding: 11px 10px 3px 50px;
+	}
+	
+	form .formSubmit button#submit em {
+		position: absolute;
+		width: 40px;
+		top: 2px;
+		bottom: 2px;
+		left: 0;
+		background-image: url(images/sprite.png);
+		background-repeat: no-repeat;
+		background-position: -142px -47px;
+	}
+	
+	form div {
+		margin-bottom: 20px;
+	}
+	
+	form #checking {
+		display: none!important;
+	}
+	
+	/* CONTACT FORM ---------------------------------------------------------*/
+	
+		.contactForm h1 {
+			margin: 0!important;
+		}	
+	
+		.contactForm h1.confirmation {
+			margin-bottom: 30px!important;
+		}
+	
+		form #copyMeIn label,
+		form #copyMeIn input {
+			display: inline;
+			width: auto;
+			vertical-align: text-top;
+		}
+
+/* NAVIGATION ---------------------------------------------------------*/
+
+	ul#navigation {
+		margin: 0;
+	}
+	
+	ul#navigation li {
+		margin: 0 0 10px 0;
+		list-style: none;
+	}
+	
+	ul#navigation li a {
+		display: block;
+		padding: 15px 20px;
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	
+	ul#navigation li.current_page_item a {
+		background: #FFF;
+	}
+
+/* WIDGETS ---------------------------------------------------------*/
+
+	.widgetArea ul {
+		margin: 0 0 30px 0;
+	}
+
+	.widgetArea > ul {
+		margin: 0;
+		padding: 20px 0 0 20px;
+	}
+
+	.widgetArea > ul li {
+		margin: 0;
+		list-style: none;
+	}
+	
+	.widgetArea ul li.widget-container ul li {
+		margin: 4px 0;
+		padding-left: 25px;
+		background-image: url(images/sprite.png);
+		background-repeat: no-repeat;
+		background-position: 0 -260px;
+	}
+
+	.widgetArea ul li.widget-container ul li:first-child {
+		margin-top: 0;
+	}
+
+	/* RECENT COMMENTS ---------------------------------------------------------*/
+
+		.widgetArea ul li.widget_recent_comments ul li {
+			background: none;
+			padding: 0;
+		}
+
+	/* SEARCH ---------------------------------------------------------*/
+
+		.widget_search {
+			padding-bottom: 30px;
+		}
+
+		.widget_search input {
+			border: none;
+			-moz-border-radius-topleft: 5px;
+			-moz-border-radius-bottomleft: 5px;
+			-webkit-border-top-left-radius: 5px;
+			-webkit-border-bottom-left-radius: 5px;
+			padding: 12px 10px 11px 10px;
+			width: 140px;
+			font-size: 15px;
+			text-transform: uppercase;
+		}
+		
+		.widget_search button {
+			border: none;
+			-moz-border-radius-topright: 5px;
+			-moz-border-radius-bottomright: 5px;
+			-webkit-border-top-right-radius: 5px;
+			-webkit-border-bottom-right-radius: 5px;
+			padding: 10px;
+			margin-left: -4px;
+			width: 50px;
+			cursor: pointer;
+			font-size: 15px;
+		}
+
+		.widget_search button span {
+			margin-left: -2px;
+			padding: 10px 0;
+			background-image: url(images/sprite.png);
+			background-repeat: no-repeat;
+			background-position: -191px -50px;
+		}
+		
+		.widget_search button span em {
+			visibility: hidden;
+		}
+
+	/* CALENDAR ---------------------------------------------------------*/
+
+		.widget_calendar h3 {
+			display: none;
+		}
+		
+		.widget_calendar table {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		
+		.widget_calendar caption {
+			text-align: left;
+			font-family: 'ArialNarrow', Arial, sans-serif;
+			text-transform: uppercase;
+			font-size: 37px;
+			line-height: 37px;
+			padding-bottom: 20px;
+		}
+	
+		.widget_calendar tbody td {
+			text-align: center;
+			padding: 0 4px;
+		}
+		
+		.widget_calendar tbody td a {
+			display: block;
+			margin: 0 2px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			text-decoration: none;
+		}
+
+		.widget_calendar tfoot td {
+			padding-top: 10px;
+			text-transform: uppercase;
+		}
+		
+		.widget_calendar tfoot td#next {
+			text-align: right;
+		}
+
+/* TWITTER ---------------------------------------------------------*/
+
+	#latestTweet {
+		min-height: 100px;
+	}
+
+	#latestTweet ul {
+		margin: 0;
+	}
+
+	#latestTweet ul li {
+		margin: 0;
+		list-style: none;
+	}
+	
+	#latestTweet ul li p:first-child {
+		font-size: 14px;
+	}
+
+/* ADVERTS ---------------------------------------------------------*/
+	
+	#advertSlot h3 {
+		margin: 30px 0;
+	}
+	#advertSlot ul {
+		margin: 0;
+	}
+	#advertSlot ul li {
+		margin: 0 0 15px 0;
+		list-style: none;
+	}
+
+/* PAGES AND SEARCH ---------------------------------------------------------*/
+
+	body.page h1,
+	body.search h1 {
+		margin-bottom: 20px;
+	}
+	
+	body.page .entryContent p:first-child,
+	body.search .entryContent p:first-child {
+	font-size: 14px;
+	line-height: 20px;
+	color: #556270;
+	}
+
+/* PAGINATION ---------------------------------------------------------*/
+
+	#navBelow {
+		position: relative;
+		margin-top: 60px;
+		background-image: url(images/sprite.png);
+		background-repeat: repeat-x;
+		background-position: 0 -127px;
+		overflow: hidden;
+	}
+
+	#navBelow a {
+		font-family: 'ArialNarrow', Arial, sans-serif;
+		text-transform: uppercase;
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+	#navBelow .navPrevious {
+		float: left;
+		width: 180px;
+		background: #FFF;
+	}
+
+	#navBelow .navNext {
+		float: right;
+		width: 188px;
+		background: #FFF;
+		text-align: right;
+	}
+
+	#navBelow .navPrevious a {
+		padding-left: 55px;
+	}
+	
+	#navBelow .navPrevious a span {
+		position: absolute;
+		bottom: 11px;
+		left: 0px;
+		height: 15px;
+		width: 40px;
+		background-image: url(images/sprite.png);
+		background-repeat: no-repeat;
+		background-position: -146px -14px;
+	}
+	
+	#navBelow .navPrevious a:hover span,
+	#navBelow .navPrevious a:focus span {
+		background-position: -233px -14px;	
+	}
+	
+	#navBelow .navNext a {
+		padding-right: 55px;
+	}
+	
+	#navBelow .navNext a span {
+		position: absolute;
+		bottom: 11px;
+		right: 0;
+		height: 15px;
+		width: 40px;
+		background-image: url(images/sprite.png);
+		background-repeat: no-repeat;
+		background-position: -183px -14px;
+	}
+	
+	#navBelow .navNext a:hover span,
+	#navBelow .navNext a:focus span {
+		background-position: -270px -14px;	
+	}
+
+/* FOOTER ---------------------------------------------------------*/
+
+	#footer {
+		clear: left;
+		width: 680px;
+		text-align: center;
+	}
+	
+	#footer .bubbleBottom {
+		background-image: url(images/sprite.png);
+		background-repeat: repeat-x;
+		height: 10px;
+		width: 685px;
+	}
+	
+	#footer .copyright {
+		margin: 20px 0 0 0;
+	}
+
+/* FIREFOX ---------------------------------------------------------*/
+
+	@-moz-document url-prefix(){
+	
+		form .formSubmit button#submit em {
+			top: 0;
+			bottom: 0;
+		}
+	
+	}
+	
+/* WEBKIT ---------------------------------------------------------*/
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+		.widget_search button {
+			padding: 10px 10px 11px 10px;
+		}
+		
+		.widget_search button span {
+			padding: 9px 15px;
+		}
+		
+	}
