@@ -1,7 +1,7 @@
 -- phpMyAdmin SQL Dump
 -- version 3.3.7deb1
 -- http://www.phpmyadmin.net
---
+--doruk.altan
 -- Host: localhost
 -- Generation Time: Dec 04, 2010 at 12:50 AM
 -- Server version: 5.1.49
