@@ -6,6 +6,7 @@ if (function_exists('add_theme_support')) {
 	set_post_thumbnail_size( 640, 240, true );
 	add_image_size( 'single-post-thumbnail', 640, 240, true );
 	add_image_size( 'other-post-thumbnail', 100, 88, true );
+
 }
 
 // setup for admin panel
