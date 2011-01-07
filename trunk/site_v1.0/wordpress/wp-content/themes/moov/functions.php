@@ -10,8 +10,8 @@ if (function_exists('add_theme_support')) {
 }
 
 // setup for admin panel
-$themename = "Moov";
-$shortname = "moov";
+$themename = "ArtılarıEksileri";
+$shortname = "ArtılarıEksileri";
 
 // create the new options
 $options = array (
