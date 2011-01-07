@@ -62,6 +62,7 @@
 		
 		<div class="skipLink"><a href="#content" title="<?php _e( 'Skip to content', 'moov' ) ?>"><?php _e( 'Skip to content', 'moov' ) ?></a></div>
 		
+		<?php/* RSS ICON
 		<ul class="socialLinks">
 			<?php if( get_option('moov_facebook') ) { ?>
 			<li><a href="<?php echo get_option('moov_facebook'); ?>" class="icon iconFacebook" title="Facebook"><span>Facebook</span></a></li>
@@ -71,7 +72,7 @@
 			<?php } ?>
 			<li><a href="<?php bloginfo('rss2_url'); ?>" title="RSS Feed" class="icon iconRss"><span>RSS</span></a></li>
 		</ul>
-		
+		*/?>
 	</div>
 
 	<div id="main">
