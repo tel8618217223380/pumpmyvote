@@ -560,6 +560,7 @@ function custom_comments($comment=false, $args=false, $depth=false, $post=false)
 			<div class="commentAuthor vcard">
 				<div align="left">
 					<?php
+					//#FIXME: aşağıdaki komutlar wordpress in fonksiyonlarını kullanmalı ya da en azından fonksiyon tanımlanmalı.
 					/*
 						$query = "SELECT comment_arti_eksi FROM  $wpdb->comment_arti_eksi WHERE comment_ID=" . get_comment_ID() . ";";
 						$user_count = $wpdb->get_var($wpdb->prepare($query));
