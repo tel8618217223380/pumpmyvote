@@ -555,42 +555,43 @@ function custom_comments($comment=false, $args=false, $depth=false, $post=false)
 ?>
 	<li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
 		
-		<div class="commentHolder">
+		<div class="commentHolder" style="position:relative">
 
-			<div class="commentAuthor vcard">
-				<div align="left">
-					<?php
-					//#FIXME: aşağıdaki komutlar wordpress in fonksiyonlarını kullanmalı ya da en azından fonksiyon tanımlanmalı.
-					/*
-						$query = "SELECT comment_arti_eksi FROM  $wpdb->comment_arti_eksi WHERE comment_ID=" . get_comment_ID() . ";";
-						$user_count = $wpdb->get_var($wpdb->prepare($query));
-						echo '<p>User count is ' . $user_count . '</p>';
-					*/	
-						$query = "SELECT comment_arti_eksi FROM wp_comment_arti_eksi WHERE comment_ID = " . get_comment_ID() . ";";
-						$result = mysql_query($query);
-						$row = mysql_fetch_assoc($result);
-						print "<font style=\"font-size:20px\">$row[comment_arti_eksi]</font>";
-						//$allmiles=$wpdb->get
-						//echo '<p>Total miles is '.$allmiles . '</p>';
+				
+				<?php
+				//#FIXME: aşağıdaki komutlar wordpress in fonksiyonlarını kullanmalı ya da en azından fonksiyon tanımlanmalı.
+				/*
+					$queçok güzelry = "SELECT comment_arti_eksi FROM  $wpdb->comment_arti_eksi WHERE comment_ID=" . get_comment_ID() . ";";
+					$user_count = $wpdb->get_var($wpdb->prepare($query));
+					echo '<p>User count is ' . $user_count . '</p>';
+				*/	
+					$query = "SELECT comment_arti_eksi FROM wp_comment_arti_eksi WHERE comment_ID = " . get_comment_ID() . ";";
+					$result = mysql_query($query);
+					$row = mysql_fetch_assoc($result);
+					print "<font style=\"font-size:20px\">$row[comment_arti_eksi]</font>";
+					//$allmiles=$wpdb->get
+					//echo '<p>Total miles is '.$allmiles . '</p>';
 
 
-					?>
-				</div>
-				<div align="right">
-					<?php commenter_link() ?>
-				</div>
-			</div>
+				?>
+				
+			<!--<div class="commentContent">
+			  -->
+				<?php comment_text() ?>
+				
+				<span style="position:absolute;right:0">
+				  <?php commenter_link() ?>
+				</span>
 							
-				<div class="commentContent">
-					<?php comment_text() ?>
+				
 				<?php if ($comment->comment_approved == '0') _e("<p class='unapproved'>Your comment is awaiting moderation.</p>\n", 'moov') ?>
-				</div>
-				
-				<div class="commentMeta">
-				
-				<div class="commentOptions">
-				
-					<?php
+			<!--</div>
+			   -->
+			
+			<div class="commentMeta">
+				<!--<div class="commentOptions">
+				-->
+					<?php/*
 							if ($post) {
 							
 								_e('RE: <a href="'.$post['url'].'"><em>'.$post['title'].'</em></a>', 'moov');
@@ -611,10 +612,10 @@ function custom_comments($comment=false, $args=false, $depth=false, $post=false)
 						$post['url'] . '#comment-' . get_comment_ID() );
 							 
 							 }
-						?>
+						*/?>
 				
-				</div>
-				
+				<!--</div>
+				-->
 				<div class="commentTime"><?php printf(__('%1$s <span class="metaSep">@</span> %2$s', 'moov'), get_comment_date(), get_comment_time() ); ?></div>
 			
 			</div>
