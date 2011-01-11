@@ -30,7 +30,7 @@ foreach ( $comments as $comment )
 <?php if ( ! empty($comments_by_type['comment']) ) : ?>
 
 				<div id="commentsList" class="comments">
-					<h2><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'moov') : __('<span>One</span> Comment', 'moov'), $comment_count) ?></h2>
+					<h5><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'moov') : __('<span>One</span> Comment', 'moov'), $comment_count) ?></h5>
 
 <?php /* If there are enough comments, build the comment navigation  */ ?>					
 <?php $total_pages = get_comment_pages_count(); if ( $total_pages > 1 ) : ?>
