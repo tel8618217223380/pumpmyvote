@@ -614,7 +614,8 @@ function get_comment_text( $comment_ID = 0 ) {
  * @param int $comment_ID The ID of the comment for which to print the text. Optional.
  */
 function comment_text( $comment_ID = 0 ) {
-	echo apply_filters('comment_text', get_comment_text() );
+	echo get_comment_text();
+	//echo apply_filters('comment_text', get_comment_text() );
 }
 
 /**
