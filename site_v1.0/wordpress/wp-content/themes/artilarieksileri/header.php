@@ -13,6 +13,9 @@
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	
 	<script type="text/javascript" src="<?php bloginfo( 'template_url' ) ?>/js/jquery-1.4.2.min.js"></script>
+
+	
+	
 	<script src="<?php bloginfo( 'template_url' ) ?>/js/cufon-yui.js" type="text/javascript"></script>
 	<script src="<?php bloginfo( 'template_url' ) ?>/js/LeagueGothic_400_full.font.js" type="text/javascript"></script>
 	<script type="text/javascript">
