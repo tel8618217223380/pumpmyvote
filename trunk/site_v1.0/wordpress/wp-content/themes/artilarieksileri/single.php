@@ -8,14 +8,14 @@
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<h1><?php the_title(); ?></h1>
-					
+					<?php/*
 					<div class="entryMeta">
 						<span class="metaSep"><?php _e('By ', 'moov'); ?></span>
 						<span class="author vcard"><a class="url fn n" href="<?php echo get_author_link( false, $authordata->ID, $authordata->user_nicename ); ?>" title="<?php printf( __( 'View all posts by %s', 'moov' ), $authordata->display_name ); ?>"><?php the_author(); ?></a></span>
 						<span class="metaSep"><?php _e('on ', 'moov'); ?></span>
 						<span class="entryDate"><abbr class="published" title="<?php the_time() ?>"><?php the_time( get_option( 'date_format' ) ); ?></abbr></span>
 					</div>
-					
+					*/?>
 					<div class="image">
 						<?php if((function_exists('has_post_thumbnail')) && (has_post_thumbnail())) {
 							echo get_the_post_thumbnail( $post->ID, 'single-post-thumbnail', array('alt'=>the_title_attribute('echo=0'),'title'=>the_title_attribute('echo=0')) );
@@ -26,7 +26,7 @@
 						} ?>
 						<span></span>
 					</div>
-					
+					<?php /*
 					<div class="entryContent">
 					
 					<?php 
@@ -47,7 +47,7 @@
 					<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'moov' ) . '&after=</div>') ?>
 					
 					</div>
-					
+					<?php /*
 					<div class="authorBlock">
 					
 						<?php echo get_avatar(get_the_author_meta('user_email',$post->post_author), 60 ); ?>
@@ -83,13 +83,13 @@
 						</div>
 
 					</div>
-					
+					*/?>
 				</div>
 				
 				<?php edit_post_link( __( 'Edit', 'moov' ), "<p>", "</p>" ) ?>
 			
 			</div>
-			
+			<?php /*
 			<?php if ( !get_option('moov_other_posts_slider') ) { ?>
 			
 			<div class="otherPosts">
@@ -132,7 +132,7 @@
 			</div>
 
 			<?php } ?>
-
+			*/?>
 			<?php wp_reset_query(); ?>
 
 			<?php comments_template('', true); ?>
