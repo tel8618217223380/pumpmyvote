@@ -16,16 +16,16 @@
 
 // ** MySQL ayarları - Bu bilgileri sunucunuzdan alabilirsiniz ** //
 /** WordPress için kullanılacak veritabanının adı */
-define('DB_NAME', 'wordpress');
+define('DB_NAME', 'demoDB');
 
 /** MySQL veritabanı kullanıcısı */
-define('DB_USER', 'root');
+define('DB_USER', 'demo');
 
 /** MySQL veritabanı parolası */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'demo2386');
 
 /** MySQL sunucusu */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '72.232.206.91');
 
 /** Yaratılacak tablolar için veritabanı karakter seti. */
 define('DB_CHARSET', 'utf8');
