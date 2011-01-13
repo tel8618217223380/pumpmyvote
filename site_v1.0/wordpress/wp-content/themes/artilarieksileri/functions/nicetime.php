@@ -2,10 +2,10 @@
 function nicetime($date)
 {
     if(empty($date)) {
-        return "No date provided";
+        return "Tarih girilmedi";
     }
 
-    $periods         = array("second", "minute", "hour", "day", "week", "month", "year", "decade");
+    $periods         = array("saniye", "dakika", "saat", "gün", "hafta", "ay", "yıl", "on yıl");
     $lengths         = array("60","60","24","7","4.35","12","10");
 
     $now             = time();
@@ -13,17 +13,17 @@ function nicetime($date)
 
        // check validity of date
     if(empty($unix_date)) {
-        return "Bad date";
+        return "Tarih biçimi yanlış";
     }
 
     // is it future date or past date
     if($now > $unix_date) {
         $difference     = $now - $unix_date;
-        $tense         = "ago";
+        $tense         = "önce";
 
     } else {
-        $difference     = $unix_date - $now;
-        $tense         = "from now";
+        $difference     = $now - $unix_date;
+        $tense         = "sonra";
     }
 
     for($j = 0; $difference >= $lengths[$j] && $j < count($lengths)-1; $j++) {
@@ -33,7 +33,7 @@ function nicetime($date)
     $difference = round($difference);
 
     if($difference != 1) {
-        $periods[$j].= "s";
+        $periods[$j].= "";
     }
 
     return "$difference $periods[$j] {$tense}";
