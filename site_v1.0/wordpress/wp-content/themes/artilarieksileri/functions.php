@@ -270,7 +270,7 @@ function moov_add_init() {
 	wp_enqueue_script("script", $file_dir."/functions/script.js", false, "1.0");
 
 }
-
+include('functions/nicetime.php');
 // HTML for admin
 function moov_admin() {
  
@@ -580,18 +580,23 @@ function custom_comments($comment=false, $args=false, $depth=false, $post=false)
 				<?php comment_text() ?>
 				
 				<span style="position:absolute;right:0">
-				  <?php commenter_link() ?>
+                <?php commenter_link() ?>  
+                <?php
+		    
+                    print nicetime(get_comment_date('Y-n-j').' '.get_comment_time('H:i'));
+                ?>
+		
 				</span>
 							
 				
 				<?php if ($comment->comment_approved == '0') _e("<p class='unapproved'>Your comment is awaiting moderation.</p>\n", 'moov') ?>
 			<!--</div>
 			   -->
-			
+		  <?php/*
 			<div class="commentMeta">
 				<!--<div class="commentOptions">
 				-->
-					<?php/*
+			
 							if ($post) {
 							
 								_e('RE: <a href="'.$post['url'].'"><em>'.$post['title'].'</em></a>', 'moov');
@@ -612,14 +617,14 @@ function custom_comments($comment=false, $args=false, $depth=false, $post=false)
 						$post['url'] . '#comment-' . get_comment_ID() );
 							 
 							 }
-						*/?>
+						?>
 				
 				<!--</div>
 				-->
 				<div class="commentTime"><?php printf(__('%1$s <span class="metaSep">@</span> %2$s', 'moov'), get_comment_date(), get_comment_time() ); ?></div>
 			
 			</div>
-			
+		  */?>
 		</div>
 
 <?php } // end custom_comments
