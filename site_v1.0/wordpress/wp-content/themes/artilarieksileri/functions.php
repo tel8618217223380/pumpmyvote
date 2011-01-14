@@ -569,11 +569,11 @@ function custom_comments($comment=false, $args=false, $depth=false, $post=false)
 		
 		if($row[comment_arti_eksi] == '+')
 		{   
-		    print '<div class="commentHolderGreen" style="position:relative">';
+		    print '<div class="commentHolderArti" style="position:relative">';
 		}
 		else
 		{
-		    print '<div class="commentHolderRed" style="position:relative">';
+		    print '<div class="commentHolderEksi" style="position:relative">';
 		}
 		print "<font style=\"font-size:20px\">$row[comment_arti_eksi]</font>";
 		//$allmiles=$wpdb->get
