@@ -498,7 +498,21 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 		padding: 20px 20px 15px 20px;
 		position: relative;
 	}
+	
+ 	#comments ol li .commentHolderGreen {
+		margin-bottom: 20px;
+		padding: 20px 20px 15px 20px;
+		position: relative;
+		background: #C6F366;
+	}
 
+	#comments ol li .commentHolderRed {
+		margin-bottom: 20px;
+		padding: 20px 20px 15px 20px;
+		position: relative;
+		background: #FE6C6C;
+	}
+	
 	#comments ol li .commentAuthor {
 		font-weight: bold;
 		padding: 0 0 10px 0;
