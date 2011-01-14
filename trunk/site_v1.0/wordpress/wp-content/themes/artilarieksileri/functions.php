@@ -554,44 +554,42 @@ function custom_comments($comment=false, $args=false, $depth=false, $post=false)
 	
 ?>
 	<li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
+	    <?php
+	    //#FIXME: aşağıdaki komutlar wordpress in fonksiyonlarını kullanmalı ya da en azından fonksiyon tanımlanmalı.
+	    /*
+		$queçok güzelry = "SELECT comment_arti_eksi FROM  $wpdb->comment_arti_eksi WHERE comment_ID=" . get_comment_ID() . ";";
+		$user_count = $wpdb->get_var($wpdb->prepare($query));
+		echo '<p>User count is ' . $user_count . '</p>';
+	    */	
+		$query = "SELECT comment_arti_eksi FROM wp_comment_arti_eksi WHERE comment_ID = " . get_comment_ID() . ";";
+		$result = mysql_query($query);
+		$row = mysql_fetch_assoc($result);
+	    
+		//print '<div class="commentHolder" style="position:relative;';
 		
-		<div class="commentHolder" style="position:relative">
+		if($row[comment_arti_eksi] == '+')
+		{   
+		    print '<div class="commentHolderGreen" style="position:relative">';
+		}
+		else
+		{
+		    print '<div class="commentHolderRed" style="position:relative">';
+		}
+		print "<font style=\"font-size:20px\">$row[comment_arti_eksi]</font>";
+		//$allmiles=$wpdb->get
+		//echo '<p>Total miles is '.$allmiles . '</p>';
+	    ?>
 
-				
-				<?php
-				//#FIXME: aşağıdaki komutlar wordpress in fonksiyonlarını kullanmalı ya da en azından fonksiyon tanımlanmalı.
-				/*
-					$queçok güzelry = "SELECT comment_arti_eksi FROM  $wpdb->comment_arti_eksi WHERE comment_ID=" . get_comment_ID() . ";";
-					$user_count = $wpdb->get_var($wpdb->prepare($query));
-					echo '<p>User count is ' . $user_count . '</p>';
-				*/	
-					$query = "SELECT comment_arti_eksi FROM wp_comment_arti_eksi WHERE comment_ID = " . get_comment_ID() . ";";
-					$result = mysql_query($query);
-					$row = mysql_fetch_assoc($result);
-					print "<font style=\"font-size:20px\">$row[comment_arti_eksi]</font>";
-					//$allmiles=$wpdb->get
-					//echo '<p>Total miles is '.$allmiles . '</p>';
-
-
-				?>
-				
-			<!--<div class="commentContent">
-			  -->
-				<?php comment_text() ?>
-				
-				<span style="position:absolute;right:0">
-                <?php commenter_link() ?>  
-                <?php
-		    
-                    print nicetime(get_comment_date('Y-n-j').' '.get_comment_time('H:i'));
-                ?>
+	    <!--<div class="commentContent">-->
+		<?php comment_text() ?>
 		
-				</span>
-							
-				
-				<?php if ($comment->comment_approved == '0') _e("<p class='unapproved'>Your comment is awaiting moderation.</p>\n", 'moov') ?>
-			<!--</div>
-			   -->
+		<span style="position:absolute;right:0">
+		    <?php commenter_link() ?>  
+		    <?php print nicetime(get_comment_date('Y-n-j').' '.get_comment_time('H:i'));?>
+		</span>
+
+		<?php if ($comment->comment_approved == '0') _e("<p class='unapproved'>Your comment is awaiting moderation.</p>\n", 'moov') ?>
+	    <!--</div>-->
 		  <?php/*
 			<div class="commentMeta">
 				<!--<div class="commentOptions">
