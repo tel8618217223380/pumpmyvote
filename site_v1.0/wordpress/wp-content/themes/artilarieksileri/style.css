@@ -631,7 +631,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 	}
 
 /* FORMS ---------------------------------------------------------*/
-
+/*
 	form input,
 	form textarea {
 		font-size: 14px;
@@ -703,7 +703,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 	form #checking {
 		display: none!important;
 	}
-	
+*/	
 	/* CONTACT FORM ---------------------------------------------------------*/
 	
 		.contactForm h1 {
