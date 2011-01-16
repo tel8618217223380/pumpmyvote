@@ -570,12 +570,14 @@ function custom_comments($comment=false, $args=false, $depth=false, $post=false)
 		if($row[comment_arti_eksi] == '+')
 		{   
 		    print '<div class="commentHolderArti" style="position:relative">';
+		    print '<img width="25" src="'.get_site_url().'/wp-content/themes/artilarieksileri/images/arti.png">';
 		}
 		else
 		{
 		    print '<div class="commentHolderEksi" style="position:relative">';
+		    print '<img width="25" src="'.get_site_url().'/wp-content/themes/artilarieksileri/images/eksi.png">';
 		}
-		print "<font style=\"font-size:20px\">$row[comment_arti_eksi]</font>";
+		//print "<font style=\"font-size:20px\">$row[comment_arti_eksi]</font>";
 		//$allmiles=$wpdb->get
 		//echo '<p>Total miles is '.$allmiles . '</p>';
 	    ?>
