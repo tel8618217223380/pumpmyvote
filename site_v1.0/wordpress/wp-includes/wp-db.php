@@ -201,7 +201,7 @@ class wpdb {
 	 * @var array
 	 */
 	var $tables = array( 'posts', 'comments', 'links', 'options', 'postmeta',
-		'terms', 'term_taxonomy', 'term_relationships', 'commentmeta', 'comment_arti_eksi' );
+		'terms', 'term_taxonomy', 'term_relationships', 'commentmeta', 'comment_arti_eksi', 'beta' );
 
 	/**
 	 * List of deprecated WordPress tables
@@ -470,6 +470,15 @@ class wpdb {
 	 * @var string
 	 */	
 	var $comment_arti_eksi;
+	
+	 /**
+	 * Pumpmyvote beta table
+	 *
+	 * @since 3.0.1
+	 * @access public
+	 * @var string
+	 */	
+	var $beta;
 
 	/**
 	 * Connects to the database server and selects a database
