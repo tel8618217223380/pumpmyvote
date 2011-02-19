@@ -5,12 +5,19 @@
   $query = "SELECT * FROM wp_beta WHERE durum = 'beklemede';";
   $result = mysql_query($query);
   
+  $num_rows = mysql_num_rows($result);
+  if($num_rows < 1)
+  {
+    print 'Denetim bekleyen hiç kayıt yok.';
+    return;
+  }
 
   print '
     <form method="post" action="beta-control-post.php">
       <table cellspacing="10">
 	<tr height="10">
 	  <td>Betano</td>
+	  <td>Kullanı adı</td>
 	  <td>Eposta</td>
 	  <td>IP Adresi</td>
 	  <td>Tarih</td>
@@ -25,6 +32,7 @@
     print "
 	<tr>
 	  <td>$row[betano]</td>	
+	  <td>$row[kullaniciadi]</td>
 	  <td>$row[eposta]</td>
 	  <td>$row[ipadres]</td>
 	  <td>$row[tarih]</td>
@@ -42,6 +50,7 @@ print '
 	  <td colspan="1" align="right"><input type="submit" value="Uygula"></td>
 	</tr>
       </table>
+      <input type="hidden" name="request_url" value="' . $_SERVER[HTTP_REFERER] . '">
      </form>
 ';
 ?> 
