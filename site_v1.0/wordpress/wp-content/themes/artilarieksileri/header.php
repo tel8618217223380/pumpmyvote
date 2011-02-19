@@ -17,11 +17,21 @@
 	
 	
 	<script src="<?php bloginfo( 'template_url' ) ?>/js/cufon-yui.js" type="text/javascript"></script>
-	<script src="<?php bloginfo( 'template_url' ) ?>/js/LeagueGothic_400_full.font.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		Cufon.replace('h1,h2,h3,caption,button,#blogTitle,.postDate,#navBelow,.dropCap');
-	</script>
-	
+
+<script src="<?php bloginfo( 'template_url' ) ?>/js/myriad-pro.cufonfonts.js" type="text/javascript"></script>
+<script type="text/javascript">
+Cufon.replace('h1,h2,h3,caption,button,#blogTitle,.postDate,#navBelow,.dropCap', { fontFamily: 'Myriad Pro Semibold Italic', hover: true });
+Cufon.replace('.myriad_pro_semibold_italic', { fontFamily: 'Myriad Pro Semibold Italic', hover: true }); 
+Cufon.replace('.myriad_pro_semibold', { fontFamily: 'Myriad Pro Semibold', hover: true }); 
+Cufon.replace('.myriad_pro_regular', { fontFamily: 'Myriad Pro Regular', hover: true }); 
+Cufon.replace('.myriad_pro_condensed_italic', { fontFamily: 'Myriad Pro Condensed Italic', hover: true }); 
+Cufon.replace('.myriad_pro_condensed', { fontFamily: 'Myriad Pro Condensed', hover: true }); 
+Cufon.replace('.myriad_pro_bold_italic', { fontFamily: 'Myriad Pro Bold Italic', hover: true }); 
+Cufon.replace('.myriad_pro_bold_condensed_italic', { fontFamily: 'Myriad Pro Bold Condensed Italic', hover: true }); 
+Cufon.replace('.myriad_pro_bold_condensed', { fontFamily: 'Myriad Pro Bold Condensed', hover: true }); 
+Cufon.replace('.myriad_pro_bold', { fontFamily: 'Myriad Pro Bold', hover: true }); 
+</script>
+
 	<link rel="shortcut icon" href="<?php echo get_option('moov_favicon'); ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ) ?>/styles/reset.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
@@ -45,6 +55,18 @@
 		<?php echo get_option('moov_custom_css'); ?>
 
 	</style>
+<style type="text/css">
+table#postadd_button {
+width:91%;
+height:44;
+background-image:url('<?php echo plugins_url('artieksi-post-widget/image/button_1.png');?>');
+background-repeat:no-repeat;
+}
+
+table#postadd_button:hover {
+background-image:url('<?php echo plugins_url('artieksi-post-widget/image/button_1_rollover.png');?>');
+}
+</style>
 	
 </head>
 
