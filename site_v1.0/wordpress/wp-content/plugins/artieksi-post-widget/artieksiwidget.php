@@ -10,7 +10,6 @@ License: Belli değil
 */
 /* Şuan belli bir lisanslama yok*/
 
-
 class ArtiEksi_Post_Widget extends WP_Widget {
 	function ArtiEksi_Post_Widget() {
 		parent::WP_Widget(false, $name = 'ArtiEksi Post Widget');
@@ -20,7 +19,8 @@ class ArtiEksi_Post_Widget extends WP_Widget {
 		      <?php echo $before_widget; ?>
 		      <?php if(current_user_can( 'edit_posts' )){  ?>
 			 <a id="artieksipostbutton" href="<?php echo admin_url('admin-ajax.php?action=ae-ajax'); ?>"  >
-			 <img src="<?php echo plugins_url('image/add-icon.png', __FILE__); ?>" width="32" height="32" /></a>
+			  <?php echo '<table id="postadd_button"><tr><td><h3>POST YAZ</h3></td></tr></table>';?>
+			 </a>
 			 <script type="text/javascript">
 			      var ae_post_fancybox = 0;//fancybox kapanma fonksiyonuna yön vermek için
 			      jQuery(document).ready(function(){
@@ -31,7 +31,7 @@ class ArtiEksi_Post_Widget extends WP_Widget {
 			      });
 			 </script>
 			 <?php }else{
-			       echo "<h1>Post için üye ol</h1>";}
+			       echo "";}
 			  ?>
 		      <?php echo $after_widget; ?>
 		<?php
