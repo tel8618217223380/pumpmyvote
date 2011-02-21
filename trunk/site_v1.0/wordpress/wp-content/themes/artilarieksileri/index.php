@@ -13,7 +13,7 @@
 				<div class="inner">
 		
 					<div class="storyIntro">
-		
+	<div class="storyIntroText">
 						<h2><a href="<?php the_permalink(); ?>" title="<?php printf( __('%s', 'moov'), get_the_title() ); ?>" rel="bookmark"><?php echo truncate_title($post->post_title); ?></a></h2>
 				
 						<div class="entryMeta">
@@ -24,7 +24,7 @@
 							<span class="entryDate"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php the_time( get_option( 'date_format' ) ); ?></abbr></span>
 							
 						</div>
-
+</div>
 					</div>
 				
 					<a class="image" href="<?php the_permalink(); ?>" title="<?php printf( __('%s', 'moov'), get_the_title() ); ?>" rel="bookmark">
