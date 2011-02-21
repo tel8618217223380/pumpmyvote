@@ -47,7 +47,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 /* LISTS ---------------------------------------------------------*/
 
 	ol,
-	ul {
+	ul {p-content/plugins/artieksi-post-widget/ima
 		margin-left: 20px;
 	}
 	ol li,
@@ -79,9 +79,10 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 	h3,
 	h4 {
 		font-family: 'ArialNarrow', Arial, sans-serif;
-		text-transform: uppercase;
+		text-transform: lowercase;
 		font-weight: normal;
 		letter-spacing: .5px;
+		font-size: 16pt !important;
 	}
 	
 	h1 {
@@ -90,7 +91,6 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 	
 	h1,
 	h2 {
-		font-size: 50px;
 		line-height: 50px;
 		text-align: center;
 	}
@@ -239,14 +239,16 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 	margin: 30px 0 0;
 	padding: 30px 0 0;
 	}
-	
+	.storyIntroText {
+        margin-left:6px;
+    }
 	.otherStory .storyIntro {
 		position: absolute;
 		z-index: 1;
 		top: 30px;
 		left: 0;
-		background: #FFF;
-		padding: 0 15px 10px 0;
+		background:rgba(255, 255, 255, 0.6); 
+		padding: 0 5px 0 0;
 		-moz-border-radius-bottomright: 20px;
 		-webkit-border-bottom-right-radius: 20px;
 	}
@@ -297,7 +299,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 		font-family: 'ArialNarrow', Arial, sans-serif;
 		text-transform: uppercase;
 		font-weight: normal;
-		font-size: 40px;
+		font-size: 30px;
 		line-height: 40px;
 		text-align: center;
 	}
@@ -306,7 +308,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 		display: block;
 		margin-top: -5px;
 		text-align: center;
-		font-size: 25px;
+		font-size: 19px;
 		line-height: 25px;
 	}
 	
@@ -350,7 +352,7 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 	}
 
 	.entryMeta {
-		text-transform: uppercase;
+		text-transform: lowercase;
 	}
 	
 	.authorBlock,

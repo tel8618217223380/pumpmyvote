@@ -71,11 +71,11 @@
 	}
 
 	.entryMeta {
-		color: #CCC;
+		color: #000;
 	}
 
 	.entryMeta a {
-		color: #999;
+		color: #ccc;
 	}
 	
 	.authorBlock p {
