@@ -449,17 +449,35 @@ case 'register' :
 	$user_email = '';
 	if ( $http_post ) {
 		require_once( ABSPATH . WPINC . '/registration.php');
-
+		
 		$user_login = $_POST['user_login'];
 		$user_email = $_POST['user_email'];
+//<!--BETA
+		if(WP_BETA)
+		{
+		    $query = "SELECT betano FROM wp_beta WHERE durum = 'enabled' and eposta = '$user_email';";
+		    $result = mysql_query($query);
+		    if(!$row = mysql_fetch_assoc($result))
+		    {
+			//FIXME:yönlendir
+			print "bu eposta için beta kaydı açılmamış.";
+			return;
+		    }
+		}
+//-->BETA
 		$errors = register_new_user($user_login, $user_email);
+//<!--BETA
+//FIXME: wp-beta tablosunu güncelle kayıt edilen eposta adresinin yanına enabled yaz.
+//-->Beta
 		if ( !is_wp_error($errors) ) {
+
 			$redirect_to = !empty( $_POST['redirect_to'] ) ? $_POST['redirect_to'] : 'wp-login.php?checkemail=registered';
 			wp_safe_redirect( $redirect_to );
 			exit();
+
 		}
 	}
-
+	
 	$redirect_to = apply_filters( 'registration_redirect', !empty( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : '' );
 	login_header(__('Registration Form'), '<p class="message register">' . __('Register For This Site') . '</p>', $errors);
 ?>
@@ -470,7 +488,7 @@ case 'register' :
 		<input type="text" name="user_login" id="user_login" class="input" value="<?php echo esc_attr(stripslashes($user_login)); ?>" size="20" tabindex="10" /></label>
 	</p>
 	<p>
-		<label><?php _e('E-mail') ?><br />
+		<label><?php  _e('E-mail') ?><br />
 		<input type="text" name="user_email" id="user_email" class="input" value="<?php echo esc_attr(stripslashes($user_email)); ?>" size="25" tabindex="20" /></label>
 	</p>
 <?php do_action('register_form'); ?>
@@ -566,6 +584,12 @@ default:
 		$errors->add('loggedout', __('You are now logged out.'), 'message');
 	elseif	( isset($_GET['registration']) && 'disabled' == $_GET['registration'] )
 		$errors->add('registerdisabled', __('User registration is currently not allowed.'));
+//BETA
+/*
+	elseif	( isset($_GET['registration']) && 'disabled' == $_GET['registration'] )
+		$errors->add('registerdisabled', __('User registration is currently not allowed.'));
+*/
+//BETA
 	elseif	( isset($_GET['checkemail']) && 'confirm' == $_GET['checkemail'] )
 		$errors->add('confirm', __('Check your e-mail for the confirmation link.'), 'message');
 	elseif	( isset($_GET['checkemail']) && 'newpass' == $_GET['checkemail'] )
