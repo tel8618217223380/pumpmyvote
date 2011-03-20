@@ -1,6 +1,6 @@
 <?php
 
-  require( $_POST['ABSPATH'] . 'wp-load.php');
+  require( '../../../wp-load.php');
 nocache_headers();
 $user = wp_get_current_user();
 $administrator = $user->data->wp_capabilities[administrator];

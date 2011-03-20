@@ -1,6 +1,6 @@
 <?php
 /** Sets up the WordPress Environment. */
-require( $_POST[ABSPATH] . 'wp-load.php');
+require('../../../wp-load.php');
 nocache_headers();
 
 $eposta = is_email(isset($_POST['email']) ? $_POST['email'] : "");
