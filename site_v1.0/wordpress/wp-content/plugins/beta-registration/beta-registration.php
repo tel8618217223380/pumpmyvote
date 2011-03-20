@@ -18,7 +18,7 @@ function widget_betaRegistration($args) {
   if(!$user->data)
   {
     echo $before_title;?>Beta Hesabı<?php echo $after_title;
-    print '<a href="'. get_option('siteurl') .'/wp-content/plugins/beta-registration/wp-beta.php?ABSPATH='. ABSPATH .'">Beta Hesabı isteği</a>'; 
+    print '<a href="'. get_option('siteurl') .'/wp-content/plugins/beta-registration/wp-beta.php">Beta Hesabı isteği</a>'; 
   }
 /*  else if($administrator)
   {
@@ -100,7 +100,6 @@ print '
 	</tr>
       </table>
       <input type="hidden" name="request_url" value="' . $_SERVER[HTTP_REFERER] . '">
-      <input type="hidden" name="ABSPATH" value="' . ABSPATH . '">
      </form>
 ';
 }
